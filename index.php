@@ -15,7 +15,7 @@ $do = $_POST['do'] ?? '';
 if ($do != '')
 {
 	$value = $_POST['value'] ?? 0;
-	$memo = $_POST['memo'] ?? '';
+	$memo = strip_tags($_POST['memo']) ?? '';
 	$value = $value * 100;
 	if ($do == "SUB") $value = $value * -1;
 	
