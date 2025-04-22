@@ -32,7 +32,7 @@ if ($do != '')
 
 <?php
 $data = $db->query("SELECT value, memo FROM sum ORDER BY rowid DESC");
-$i = 0;
+$i = 0; $total = 0;
 while ($res = $data->fetchArray(SQLITE3_ASSOC)) {
 	$value = $res['value'];
 	$total = $total + $value;
